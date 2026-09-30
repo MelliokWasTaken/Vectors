@@ -11,27 +11,35 @@ class AbstractVector2D(abc.ABC):
     def len(self):
         pass
 
+    @abc.abstractmethod
     def __len__(self):
         pass
 
+    @abc.abstractmethod
     def __add__(self, other):
         pass
 
+    @abc.abstractmethod
     def __str__(self):
         pass
 
+    @abc.abstractmethod
     def __mul__(self, other):
         pass
 
+    @abc.abstractmethod
     def __sub__(self, other):
         pass
 
+    @abc.abstractmethod
     def normalized(self):
         pass
 
+    @abc.abstractmethod
     def normalize(self):
         pass
 
+    @abc.abstractmethod
     def project(self, other):
         pass
 
@@ -80,6 +88,7 @@ class Vector2D(AbstractVector2D):
 
     def project(self, other):
         return other*((self*other)/(other*other))
+
 
 
 def main():
